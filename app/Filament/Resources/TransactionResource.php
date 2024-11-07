@@ -30,7 +30,7 @@ class TransactionResource extends Resource
                     ->relationship('category', 'name')
                     ->required(),
                     // ->numeric(),
-                Forms\Components\DatePicker::make('date')
+                Forms\Components\DatePicker::make('transaction_date')
                     ->required(),
                 Forms\Components\TextInput::make('amount')
                     ->required()
@@ -57,7 +57,7 @@ class TransactionResource extends Resource
                     ->sortable(),
                 // Tables\Columns\TextColumn::make('name')
                 //     ->searchable(),
-                Tables\Columns\TextColumn::make('date')
+                Tables\Columns\TextColumn::make('transaction_date')
                     ->label('Tanggal')
                     ->sortable(),
                 Tables\Columns\IconColumn::make('category.is_expense')
